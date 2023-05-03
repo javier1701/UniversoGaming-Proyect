@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/*-------
+Colores principales a usar: 
+Xbox: #0E7A0D
+PS: #006FCD
+Se pueden usar deribados, ya sean mas claros o mas oscuros, de estos colores.
+-------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: 700;
+}
+
+/*----------------- Seccion de Header -----------------*/
+.site-header {
+	overflow: hidden;
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(24, 142, 242, 0.3), rgba(24, 142, 242, 0.3)), url(imagenes/header.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative; 
+}
+
+nav {
+	display: flex;
+	padding: 1.3% 4.5%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .logo {
+	font-size: 2.7em;
+	color: #FFF;
+	background: linear-gradient(to right, #0E7A0D, #006FCD);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nav-links {
+	flex: 1;
+	text-align: right;
+}
+
+.nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.nav-links ul li::after {
+	content: ""; 
+	width: 0%;
+	height: 2px;
+	background: #0E7A0D;
+	display: block;
+	margin: auto;
+	transition: 0.6s;
+}
+
+.nav-links ul li:hover::after {
+	width: 100%;
+	box-shadow: 0 0 10px 5px rgba(14, 122, 13, 0.6)
+}
+
+.nav-links ul li a {
+	text-decoration: none;
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.text-box {
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.text-box h1 {
+	font-size: 4em;
+	color: #FFF;
+	margin-bottom: 3%;
+}
+
+.visit-btn {
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid #0E7A0D;
+	border-radius: 25px;
+	padding: 12px 34px;
+	font-size: 0.8em;
+	background: #0E7A0D;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: 0.5s all ease-in-out;
+	box-shadow: 0px 1px 10px 5px #006FCD;
+}
+
+.visit-btn a {
+	color: #FFF;
+}
+
+.visit-btn:hover {
+	border: 1px solid #006FCD;
+	background: #006FCD;
+	font-weight: 700;
+	color: #FFF;
+	transform: translate(-1.5px, -1.5px);
+}
+
+nav .fa {
+	display: none;
+}
+
+
+/*----------------- Seccion de Sobre Nosotros -----------------*/
+.sNosotros {
+	min-height: 40vh;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+h1 {
+	font-size: 2.1em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+p {
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.row {
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.nosotros-col {
+	flex-basis: 31%;
+	background: rgba(18, 131, 227, 0.29);
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.45s ease-in-out;
+	height: 300px;
+}
+
+.nosotros-col:hover {
+	box-shadow: 0 0 20px 0px rgba(14, 122, 13, 0.5);
+	transform: scale(1.1, 1.1);
+}
+
+.nosotros-col h3 {
+	text-align: center;
+	font-weight: 700;
+	margin: 15px 0;
+}
+
+.nosotros-col p {
+	padding: 5px 40px;
+}
+
+
+
+/*----------------- Seccion Mas Vendidos -----------------*/
+.container {
+	background-image: url(imagenes/gotm2.png);
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 5em;
+	color: #FFF;
+}
+
+.container p {
+	color: #FFF;
+	font-size: 1.3em;
+}
+
+.masVendidos {
+	margin: auto 12%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.masVendidos h1 {
+	font-size: 3em;
+}
+
+.anuncio-col {
+	flex-basis: 32%;
+	border-radius: 25px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.anuncio-col img {
+	width: 100%;
+	display: block;
+}
+
+.layer {
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s ease;
+}
+
+.layer:hover {
+	background: linear-gradient(rgba(15, 122, 13, 0.637), rgba(0, 111, 205, 0.637));
+	cursor: pointer;
+}
+
+.layer h3 {
+	width: 100%;
+	font-weight: 700;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-size: 1.9em;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: 0.8s ease;
+	color: #FFF;
+}
+
+.layer:hover h3 {
+	bottom: 49%;
+	opacity: 1;
+}
+
+.masVendidos .visit-btn {
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid #006FCD;
+	border-radius: 25px;
+	padding: 12px 34px;
+	font-size: 0.8em;
+	background: #006FCD;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: 0.5s all ease-in-out;
+}
+
+.masVendidos .visit-btn a {
+	color: #FFF;
+}
+
+.masVendidos .visit-btn:hover {
+	border: 1px solid #006FCD;
+	background: #006FCD;
+	font-weight: 700;
+	color: #FFF;
+	transform: none;
+}
+
+
+/*----------------- Seccion de Testimonios -----------------*/
+.testimonios {
+	width: 80%;
+	margin: auto;
+	padding-top: 100px;
+	text-align: center;
+}
+
+.testimonios-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 20%;
+	border-radius: 25px;
+	margin-bottom: 5%;
+	background: rgba(18, 131, 227, 0.29);
+	padding: 25px;
+	display: flex;
+	box-shadow: 0 0 25px rgba(14, 122, 13, 0.4);
+}
+
+.testimonios-col img {
+	height: 8em;
+	width: 8em;
+	margin: 0 30px 20px;
+	border: 3px solid #006FCD;
+	border-radius: 50%;
+}
+
+.testimonios-col p {
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.testimonios-col h3 {
+	margin-bottom: 0.2em;
+}
+
+.testimonios-col h3 h5{
+	text-align: left;
+}
+
+.testimonios-col h5 {
+	margin: 8px 0;
+}
+
+.testimonios-col .fa {
+	color: #E8AD0C;
+}
+
+
+
+
+
+/*-------- CTA Section --------*/
+.cta {
+	margin: 100px auto 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(imagenes/cta2.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	padding: 100px 0;
+	background-attachment: fixed;
+}
+
+.cta h1{
+	color: #FFF;
+	margin-bottom: 40px;
+	padding: 0;
+	font-size: 1.8em;
+}
+
+
+/*----------------- Seccion del Footer -----------------*/
+.footer {
+	text-align: center;
+	padding: 30px 0;
+	background: #302E2E;
+	color: #fff;
+}
+
+.footer .row {
+	margin: 0;
+	justify-content: space-around;
+}
+
+.footer-col {
+	flex-basis: 31%;
+	padding: 12px;
+}
+
+.footer h4 {
+	margin: 0 0 20px;
+	font-weight: 700;
+}
+
+.footer h5 {
+	margin-top: 10px;
+}
+
+.footer p {
+	color: #FFF;
+	padding: 0;
+}
+
+.texto {
+	text-align: justify;
+}
+
+.footer-links ul li {
+	list-style: none;
+	display: block;
+	padding: 8px 12px;
+	position: relative;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.footer span {
+	color: #0E7A0D;
+	font-weight: 700;
+	line-height: 2;
+}
+
+.footer-links ul li::after {
+	content: ""; 
+	width: 0%;
+	height: 2px;
+	background: #0E7A0D;
+	display: block;
+	margin: auto;
+	transition: 0.6s;
+}
+
+.footer-links ul li:hover::after {
+	width: 18%;	
+	box-shadow: 0 0 10px 5px rgba(14, 122, 13, 0.5)
+}
+
+.footer-links ul li a {
+	color: #FFF;
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+.footer-links img {
+	width: 25px;
+	margin: 0 10px;
+}
+
+.footer .deR {
+	margin: 20px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------ Pagina de Nosotros ------------------------------------*/
+
+.sub-header {
+	overflow: hidden;
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(24, 142, 242, 0.3), rgba(24, 142, 242, 0.3)), url(imagenes/header.jpg);
+	background-size: cover;
+	text-align: center;
+	color: #FFF;
+}
+
+.sub-header h1 {
+	margin-top: 8.5rem;
+	font-size: 3.5em;
+}
+
+.sobre-nosotros {
+	width: 80%;
+	margin: auto;
+	padding: 80px 0 50px;
+}
+
+/*-------------- Seccion de Sobre Nosotros --------------*/
+
+.tienda-col {
+	flex-basis: 48%;
+	padding: 30px 2px;
+}
+
+.tienda-col h1 {
+	padding-top: 0;
+}
+
+.tienda-col p {
+	padding: 15px 0 25px;
+	line-height: 2;
+}
+
+.tienda-col img {
+	width: 100%;
+	border-radius: 20px;
+}
+
+/*-------------- Seccion de Mision, Vision y Valores --------------*/
+
+.mvv {
+	min-height: 50vh;
+	background-image: url(imagenes/fondo-mvs.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.sobre-nosotros-col {
+	flex-basis: 31%;
+	padding: 100px 2px;
+	text-align: center;	
+	background: rgba(18, 131, 227, 0.29);
+	border-radius: 10px;
+	margin-bottom: 5%;
+	box-sizing: border-box;
+	transition: 0.45s ease-in-out;
+	height: 750px;
+}
+
+.sobre-nosotros-col:hover {
+	box-shadow: 0 0 20px 0px rgba(14, 122, 13, 0.5);
+}
+
+.sobre-nosotros-col h1 {
+	margin-bottom: 20px;
+}
+
+.sobre-nosotros-col p {	
+	line-height: 2;
+	font-size: 1.1em;
+}
+
+.m-v-v {
+	width: 75px;
+	margin-bottom: 20px;
+}
+
+.valores {
+	text-align: left;
+	line-height: 2;
+	font-weight: bold;
+}
+
+.valores ul li{
+	list-style: none;
+	padding: 0 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------ Pagina de Catalogo ------------------------------------*/
+/*------------------ Seccion de Xbox ------------------*/
+.container2 {
+	background-image: url(imagenes/xbox-logo.png);
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 5em;
+}
+
+.container2 p {
+	font-size: 1.1em;
+}
+
+.xbox-games {
+	margin: auto 12%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.xbox-games h1 {
+	font-size: 3em;
+}
+
+.row2 {
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.xbox-col {
+	flex-basis: 32%;
+	border-radius: 25px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.xbox-col img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.xbox-col2 {
+	flex-basis: 30%;
+	border-radius: 25px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.xbox-col2 img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.xbox-layer {
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s ease;
+}
+
+.xbox-layer:hover {
+	background: rgba(36, 173, 35, 0.7);
+	cursor: pointer;
+}
+
+.xbox-layer h3 {
+	width: 100%;
+	font-weight: 700;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-size: 1.4em;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: 0.8s ease;
+	color: #FFF;
+}
+
+.xbox-layer:hover h3 {
+	bottom: 49%;
+	opacity: 1;
+}
+
+/*------------------ Seccion de PS------------------*/
+.container3 {
+	background-image: url(imagenes/ps-logo.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 5em;
+	color: #FFF;
+}
+
+.container3 p {
+	font-size: 1.1em;
+	color: #FFF;
+}
+
+.ps-games {
+	margin: auto 12%;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.ps-games h1 {
+	font-size: 3em;
+}
+
+.ps-col {
+	flex-basis: 32%;
+	border-radius: 25px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.ps-col img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.ps-col2 {
+	flex-basis: 30%;
+	border-radius: 25px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.ps-col2 img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.ps-layer {
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s ease;
+}
+
+.ps-layer:hover {
+	background: rgba(6, 110, 199, 0.7);
+	cursor: pointer;
+}
+
+.ps-layer h3 {
+	width: 100%;
+	font-weight: 700;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-size: 1.4em;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: 0.8s ease;
+	color: #FFF;
+}
+
+.ps-layer:hover h3 {
+	bottom: 49%;
+	opacity: 1;
+}
+
+
+
+/*------------------------------------ Pagina de Contacto ------------------------------------*/
+.contacto {
+	width: 80%;
+	margin: 5em auto;
+}
+
+contacto-col {
+	flex-basis: 47%;
+	margin-bottom: 30px;
+}
+
+.contacto-col div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.contacto-col div .fa {
+	font-size: 28px;
+	color: #006FCD;
+	margin: 10px 30px;
+}
+
+.contacto-col div p {
+	padding: 0;
+}
+
+.contacto-col div h5 {
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #555;
+	font-weight: 400;
+}
+
+.contacto-col input,
+.contacto-col textarea {
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #ccc;
+}
+
+.enviar-btn {
+	font-size: 15px;
+	padding: 3px 18px;
+	background-color: #0E7A0D;
+	color: #FFF;
+	border: none;
+	border-radius: 20px;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.borrar-btn {
+	font-size: 15px;
+	padding: 3px 18px;
+	background-color: #DB1616;
+	color: #FFF;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.location {
+	width: 80%;
+	margin: auto;
+	padding: 80px 0;
+}
+
+.location iframe {
+	width: 100%;	
+}
+
+
+/*----------------- Media Queries -----------------*/
+@media (max-width: 1430px) {
+	.testimonios {
+		width: 50%;
+	}
+
+	.testimonios .row {
+		flex-direction: column;
+	}
+}
+
+
+@media (max-width: 940px){
+	.text-box h1 {
+		font-size: 2.3em;		
+	}
+
+
+	.nav-links {
+		position: absolute;
+		background: #097EE0;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -100%;
+		text-align: left;
+		transition: 0.8s ease;
+		z-index: 2;
+	}
+
+	.nav-links-active {
+		right: 0;
+	}
+
+	.nav-links ul {
+		padding: 30px;
+		text-align: center;
+	}
+
+	.nav-links ul li {
+		display: block;
+		margin-bottom: 3em;
+	}
+
+	nav .fa {
+		display: block;	
+		color: #000;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+
+	.row, .row2 {
+		flex-direction: column;
+	}
+
+	.mvv {
+		background-attachment: cover;
+	}
+}
+
+
+@media(max-width: 1040px){
+	.footer .row {
+		flex-direction: column;
+	}
+
+	.cta h1 {
+		font-size: 1.3em;
+	}
+}
+
+
+
